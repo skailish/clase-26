@@ -41,7 +41,7 @@ body {
   width: 25px;
   height: 25px;
   background-color: red;
-  animation: animation;
+  animation-name: animation;
   animation-duration: 4s;
   animation-timing-function: linear;
   animation-fill-mode: both;
