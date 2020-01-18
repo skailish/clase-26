@@ -120,21 +120,21 @@
 }
 @keyframes copocae {
   0% {
-    top: -5px;
+    top: -20%;
   }
   100% {
-    bottom: -5px;
+    top: 100%;
   }
 }
 @keyframes copomueve {
   0% {
-    transform: translateX(50px);
+    transform: translateX(0px);
   }
   50% {
-    transform: translateX(10px);
+    transform: translateX(80px);
   }
   100% {
-    transform: translateX(30px);
+    transform: translateX(0px);
   }
 }
 body {
@@ -399,7 +399,7 @@ main {
   border-radius: 50%;
   margin: 0 20px;
   background-color: #ccc;
-  animation: slide 1s linear infinite both;
+  animation: slide 3s linear infinite both;
 }
 
 .nieve {
@@ -408,66 +408,64 @@ main {
   height: 100%;
   width: 100%;
 }
-.nieve:nth-child(1) {
-  left: 10px;
-  top: 10px;
+.nieve img:nth-of-type(1) {
+  left: 40.6px;
+  animation-delay: 1.8s;
 }
-.nieve:nth-child(2) {
-  left: 20px;
-  top: 20px;
+.nieve img:nth-of-type(2) {
+  left: 255.5px;
+  animation-delay: 2.7s;
 }
-.nieve:nth-child(3) {
-  left: 30px;
-  top: 30px;
+.nieve img:nth-of-type(3) {
+  left: 17.5px;
+  animation-delay: 3.6s;
 }
-.nieve:nth-child(4) {
-  left: 40px;
-  top: 40px;
+.nieve img:nth-of-type(4) {
+  left: 2.8px;
+  animation-delay: 3.6s;
 }
-.nieve:nth-child(5) {
-  left: 50px;
-  top: 50px;
+.nieve img:nth-of-type(5) {
+  left: 181.3px;
+  animation-delay: 6.3s;
 }
-.nieve:nth-child(6) {
-  left: 60px;
-  top: 60px;
+.nieve img:nth-of-type(6) {
+  left: 210px;
+  animation-delay: 0.9s;
 }
-.nieve:nth-child(7) {
-  left: 70px;
-  top: 70px;
+.nieve img:nth-of-type(7) {
+  left: 31.5px;
+  animation-delay: 5.4s;
 }
-.nieve:nth-child(8) {
-  left: 80px;
-  top: 80px;
+.nieve img:nth-of-type(8) {
+  left: 22.4px;
+  animation-delay: 0.9s;
 }
-.nieve:nth-child(9) {
-  left: 90px;
-  top: 90px;
+.nieve img:nth-of-type(9) {
+  left: 266.7px;
+  animation-delay: 6.3s;
 }
-.nieve:nth-child(10) {
-  left: 100px;
-  top: 100px;
+.nieve img:nth-of-type(10) {
+  left: 101.5px;
+  animation-delay: 2.7s;
 }
-.nieve:nth-child(11) {
-  left: 110px;
-  top: 110px;
+.nieve img:nth-of-type(11) {
+  left: 208.6px;
+  animation-delay: 7.2s;
 }
 .nieve img {
-  height: 25px;
-  width: 25px;
+  height: 5px;
+  width: 5px;
   position: absolute;
 }
-.nieve .copo1 {
-  animation: copocae 2s ease-in infinite both, copomueve 3s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite both;
-  animation-delay: 1s;
-}
-.nieve .copo2 {
-  animation: copocae 2s ease-in infinite both, copomueve 3s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite both;
-  animation-delay: 0.5s;
-}
-.nieve .copo3 {
-  animation: copocae 2s ease-in infinite both, copomueve 3s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite both;
-  animation-delay: 0.1s;
+
+.copo {
+  top: -100px;
+  animation-name: copocae, copomueve;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-fill-mode: both;
+  animation-play-state: running, running;
 }
 
 /*# sourceMappingURL=styles.css.map */
