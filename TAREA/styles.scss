@@ -304,7 +304,7 @@ main {
     border-radius: 50%;
     margin: 0 20px;
     background-color: #ccc;
-    animation: slide 3s linear infinite both;
+    animation: slide 1s linear infinite both;
 }
 
 // NIEVE
@@ -342,3 +342,44 @@ main {
     animation-fill-mode: both;
     animation-play-state: running, running;
 }
+
+// another example copi-pasted
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.circle-big {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+}
+
+
+.circle2 {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation: small-circles-color 3s linear infinite both;
+
+    
+}
+
+
+
+@for $i from 1 to 49 {
+    $rotate: $i * -15deg;
+    $delay: $i * 0.1s;
+
+    .circle-big div:nth-child(#{$i}) {
+        transform: rotate($rotate) translate(10px);
+        animation-delay: $delay;
+    }
+}
+
+   

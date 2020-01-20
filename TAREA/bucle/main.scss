@@ -1,0 +1,15 @@
+@mixin sequentialDelay($items, $ratio-delay, $origin-delay) {
+    @for $i from 1 through $items {
+        &:nth-child(#{$i}) {
+        animation-delay: #{$origin-delay + $ratio-delay * ($i - 1)}s;
+        }
+
+    }
+
+}
+
+
+
+.box {
+    @include sequentialDelay(4, 0.5, 1);
+  }
